@@ -11,7 +11,7 @@ const questions = [
     },
     {
         question: "Which of the following is not a valid set of operation in Python?",
-        answer: [
+        answers: [
             { text: "Union", correct: false},
             { text: "Intersection", correct: false},
             { text: "Difference", correct: false},
@@ -20,7 +20,7 @@ const questions = [
     },
     {
         question: "In which language python is written?",
-        answer: [
+        answers: [
             { text:"C++", correct: false},
             { text:"C", correct: true},
             { text:"Java", correct: false},
@@ -29,7 +29,7 @@ const questions = [
     },
     {
         question: "As what datatype are the *args stored, when passed into a function?",
-        answer: [
+        answers: [
             { text:"List", correct: false},
             { text:"Tuple", correct: true},
             { text:"Dictionary", correct: false},
@@ -41,7 +41,7 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
-
+console.log(document);
 //we have defined the index of question and score at zero
 let currentQuestionIndex= 0;
 let score = 0;
@@ -99,7 +99,7 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = 'You scored ${score} out of ${questions.length}!';
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
@@ -120,15 +120,6 @@ nextButton.addEventListener("click", ()=>{
         startQuiz();
     }
  }
- 
- 
- 
- 
- 
- 
- 
- 
- 
  )
 
 startQuiz();
